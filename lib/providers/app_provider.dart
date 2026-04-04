@@ -171,14 +171,17 @@ class AppProvider with ChangeNotifier {
   }) {
     return allVehicles.where((v) {
       if (v.price > maxBudget) return false;
-      if (category != null && category.isNotEmpty && v.category != category)
+      if (category != null && category.isNotEmpty && v.category != category) {
         return false;
-      if (fuelType != null && fuelType.isNotEmpty && v.fuelType != fuelType)
+      }
+      if (fuelType != null && fuelType.isNotEmpty && v.fuelType != fuelType) {
         return false;
+      }
       if (transmission != null &&
           transmission.isNotEmpty &&
-          v.transmission != transmission)
+          v.transmission != transmission) {
         return false;
+      }
       return true;
     }).toList();
   }
