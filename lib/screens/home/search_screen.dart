@@ -184,7 +184,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       children: [
                         Expanded(
                           child: DropdownButtonFormField<String>(
-                            value: _selectedCategory,
+                            initialValue: _selectedCategory,
                             decoration: const InputDecoration(
                               labelText: 'Category',
                             ),
@@ -207,7 +207,7 @@ class _SearchScreenState extends State<SearchScreen> {
                         const SizedBox(width: 12),
                         Expanded(
                           child: DropdownButtonFormField<String>(
-                            value: _selectedFuelType,
+                            initialValue: _selectedFuelType,
                             decoration: const InputDecoration(
                               labelText: 'Fuel Type',
                             ),
@@ -231,7 +231,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     ),
                     const SizedBox(height: 12),
                     DropdownButtonFormField<String>(
-                      value: _selectedTransmission,
+                      initialValue: _selectedTransmission,
                       decoration: const InputDecoration(
                         labelText: 'Transmission',
                       ),

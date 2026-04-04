@@ -143,7 +143,7 @@ class _EditVehicleScreenState extends State<EditVehicleScreen> {
     required ValueChanged<String?> onChanged,
   }) {
     return DropdownButtonFormField<String>(
-      value: value,
+      initialValue: value,
       decoration: InputDecoration(
         labelText: label,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
@@ -249,8 +249,9 @@ class _EditVehicleScreenState extends State<EditVehicleScreen> {
                 onSaved: (val) => _mileage = int.tryParse(val!) ?? _mileage,
                 validator: (val) {
                   final mileage = int.tryParse(val!);
-                  if (mileage == null || mileage < 0)
+                  if (mileage == null || mileage < 0) {
                     return 'Enter valid mileage';
+                  }
                   return null;
                 },
                 keyboardType: TextInputType.number,

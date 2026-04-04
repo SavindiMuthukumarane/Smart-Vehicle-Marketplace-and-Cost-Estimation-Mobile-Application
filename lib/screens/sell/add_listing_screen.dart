@@ -309,7 +309,7 @@ class _AddListingScreenState extends State<AddListingScreen> {
           vertical: 16,
         ),
       ),
-      value: value,
+      initialValue: value,
       items: items.map((item) {
         return DropdownMenuItem(value: item, child: Text(item));
       }).toList(),
